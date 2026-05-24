@@ -26,9 +26,9 @@ ball.vy = 0;
 var pegs = [];
 var pegConfigs = 
     [
-        { x: 100, y: 800, color: "#00ff00", points: 1, bounceForce: 8 },   // Green: Low bounce
-        { x: 500, y:500, color: "#ff0000", points: 2, bounceForce: 13 },  // Red: Medium bounce
-        { x: 900, y: 800, color: "#ffff00", points: 3, bounceForce: 18 }   // Yellow: High bounce
+        { x: 100, y: 800, color: "#00ff00", points: 1, bounceForce: 8 },   // Green = Low bounce
+        { x: 500, y:500, color: "#ff0000", points: 2, bounceForce: 13 },  // Red = Medium bounce
+        { x: 900, y: 800, color: "#ffff00", points: 3, bounceForce: 18 }   // Yellow = High bounce
     ];
 
 
@@ -158,7 +158,6 @@ function animate()
         // }
     }
 
-    // --- PEGS COLLISION ENGINE ---
     for (var i = 0; i < pegs.length; i++) {
         var currentPeg = pegs[i];
 
@@ -175,7 +174,6 @@ function animate()
             ball.y += ball.vy * 1.2;
         }
     }
-    // -----------------------------
 
     function doHandleGravity () {
         ball.vy += gravity;
